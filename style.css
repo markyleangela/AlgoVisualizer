@@ -1,7 +1,40 @@
 canvas {
    
-    display: block;
-    margin-top: 100px;
-    width: 700px;
+    margin-top: 50px;
+    width: 850px;
     height: 500px;
+    background-color: lightgrey;
 }
+
+.canvas-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.sort-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border: 0;
+}
+
+button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+.random-button {
+    background-color: lightgreen;
+
+}
+
+.start-button {
+    background-color: limegreen;
+}
+
