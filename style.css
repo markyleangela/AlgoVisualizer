@@ -1,40 +1,29 @@
-canvas {
-   
-    margin-top: 50px;
-    width: 850px;
+html{
+    background-color: cyan;
+}
+
+
+#container {
     height: 500px;
-    background-color: lightgrey;
-}
-
-.canvas-flex{
     display: flex;
+    align-items: flex-end;
+    gap: 5px;
     justify-content: center;
 }
 
-.sort-buttons {
-    margin-top: 50px;
+#buttons {
+    
+}
+
+body {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-button {
-    width: 100px;
-    height: 30px;
-    border: 0;
-}
-
-button:hover{
-    background-color: gray;
-    cursor: pointer;
-}
-
-.random-button {
-    background-color: lightgreen;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 
 }
 
-.start-button {
-    background-color: limegreen;
+.bar {
+    width: 5px;
+    background-color: black;
 }
-
