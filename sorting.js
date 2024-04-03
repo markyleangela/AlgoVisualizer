@@ -1,4 +1,4 @@
-const numOfElements = 75;
+const numOfElements = 10;
 const arr = new Array(numOfElements);
 
 function start(){
@@ -10,7 +10,7 @@ function start(){
     showBars();
     
 }
- c
+
 function refresh(){
     location.reload();
 }
@@ -28,6 +28,9 @@ function play(){
         case "selection":
             swaps = selectionSort(copy);
             break;
+        case "insertion":
+            swaps = insertionSort(copy);
+            break;
     }
 
     animate(swaps);
@@ -44,7 +47,7 @@ function animate(swaps){
     showBars([i,j]);
     setTimeout(function(){
         animate(swaps);
-    }, 50);
+    }, 1000);
 
 
 }
@@ -86,6 +89,30 @@ function bubbleSort(arr){
             }
         }
     }while(swapped);
+    return swaps;
+}
+
+
+
+function insertionSort(arr){
+    const swaps=[];
+    var keyValue, j;
+    for(let i = 1; i < arr.length; i++){
+        keyValue = arr[i];
+        j = i - 1;
+    
+        while(j >= 0 && keyValue < arr[j]){
+            swaps.push([j+1, j]);
+            console.log(j+1 , j);
+            arr[j+1] = arr[j];
+            j--;
+        }
+
+        arr[j + 1] = keyValue;
+        
+
+    }
+
     return swaps;
 }
 
